@@ -1,0 +1,776 @@
+/********** LOGO COLOR **********/
+
+.orange-letter {
+    color: var(--bs-orange);
+}
+
+/********** SOCIAL MIDIA ICONE **********/
+
+.btn-outline-orange {
+    color: var(--bs-orange);      
+    border-color: var(--bs-orange);   
+}
+
+.btn-outline-orange:hover {
+    background-color: var(--bs-orange); 
+    color: white;              
+    border-color: var(--bs-orange);      
+}
+
+/********** Template CSS **********/
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+/*** Header Orange color ***/
+
+.breadcrumb-item.active {
+    color: var(--bs-orange);
+}
+
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    font-weight: 600;
+    transition: .5s;
+    border-radius: 50px;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: inherit;
+}
+
+.btn-primary {
+    color: var(--bs-white);
+}
+
+
+/*** Navbar ***/
+.navbar {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    transition: .5s;
+}
+
+.navbar .navbar-nav .nav-link {
+    margin-right: 25px;
+    padding: 40px 0;
+    color: var(--bs-white);
+    font-size: 17px;
+    text-transform: uppercase;
+    outline: none;
+    transition: .5s;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--bs-orange);
+}
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-nav .nav-link,
+    .navbar.bg-dark .navbar-nav .nav-link {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar .navbar-nav {
+        margin-top: 8px;
+        border-top: 1px solid var(--bs-light);
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar.bg-dark .navbar-nav .nav-link {
+        padding: 20px 0;
+    }
+
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+
+/*** Header ***/
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 100px;
+    background: rgb(0 0 0 / 28%);
+    z-index: 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+@media (max-width: 768px) {
+    #header-carousel .carousel-item {
+        position: relative;
+        min-height: 550px;
+    }
+    
+    #header-carousel .carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.page-header {
+    padding-top: 200px;
+    background: linear-gradient(rgb(0 0 0 / 55%), rgb(0 0 0 / 41%)), url(../img/bg1.png) top center no-repeat;
+    background-size: cover;
+}
+
+.page-header .breadcrumb-item + .breadcrumb-item::before {
+    color: var(--bs-white);
+}
+
+
+/*** Title ***/
+.title {
+    margin-bottom: 2rem;
+}
+
+.title .title-left,
+.title .title-center,
+.title .title-right {
+    display: inline-block;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.title .title-center {
+    text-align: center;
+}
+
+.title .title-right {
+    text-align: right;
+}
+
+.title .title-left h5,
+.title .title-center h5,
+.title .title-right h5 {
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.title .title-left h5::after,
+.title .title-center h5::before,
+.title .title-center h5::after,
+.title .title-right h5::before {
+    position: absolute;
+    content: "";
+    width: 500%;
+    height: 0;
+    top: 9px;
+    border-bottom: 1px solid var(--bs-white);
+}
+
+.title .title-left h5::after,
+.title .title-center h5::after {
+    left: calc(100% + 15px);
+}
+
+.title .title-right h5::before,
+.title .title-center h5::before {
+    right: calc(100% + 15px);
+}
+
+.title .title-left h1,
+.title .title-center h1,
+.title .title-right h1 {
+    border-bottom: 1px solid var(--bs-white);
+}
+
+
+/*** Service ***/
+.service-item {
+    position: relative;
+    margin-top: 2.5rem;
+    overflow: hidden;
+}
+
+.service-item .service-img {
+    position: relative;
+    display: inline-block;
+}
+
+/* .service-item .service-img::before {
+    position: absolute;
+    content: "";
+    width: calc(100% - 12rem);
+    height: calc(100% - 12rem);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3rem solid rgba(0, 0, 0, .5);
+    border-radius: 300px;
+    z-index: 1;
+} */
+
+.service-item.service-item-left {
+    border-radius: 500px 0 0 500px;
+    background: linear-gradient(to right, var(--bs-secondary), var(--bs-dark));
+}
+
+.service-item.service-item-right {
+    border-radius: 0 500px 500px 0;
+    background: linear-gradient(to left, var(--bs-secondary), var(--bs-dark));
+}
+
+@media (max-width: 767.98px) {
+    .service-item.service-item-left,
+    .service-item.service-item-right {
+        border-radius: 500px 500px 0 0;
+        background: linear-gradient(to bottom, var(--bs-secondary), var(--bs-dark));
+        text-align: center;
+    }
+}
+
+
+/*** Team ***/
+.team-item {
+    position: relative;
+}
+
+.team-item .team-name {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .7);
+}
+
+.team-item .team-body {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-item .team-body .team-before,
+.team-item .team-body .team-after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: calc(100% - 60px);
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: .5s;
+}
+
+.team-item .team-body .team-after {
+    left: auto;
+    right: 0;
+}
+
+.team-item .team-body .team-before {
+    text-align: right;
+}
+
+.team-item:hover .team-body .team-before,
+.team-item:hover .team-body .team-after {
+    width: 50%;
+}
+
+.team-item .team-body .team-before span,
+.team-item .team-body .team-after span {
+    margin: 5px;
+    color: var(--bs-white);
+    opacity: 0;
+    transition: .5s;
+}
+
+.team-item:hover .team-body .team-before span,
+.team-item:hover .team-body .team-after span {
+    opacity: 1;
+    transition-delay: .2s;
+}
+
+
+/*** Testimonial ***/
+.testimonial-carousel {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.testimonial-carousel .owl-dots {
+    margin-top: 35px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dots .owl-dot {
+    width: 60px;
+    height: 60px;
+    margin: 0 5px;
+    padding: 10px;
+    background: var(--bs-dark);
+    border-radius: 100px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-dots .owl-dot.active {
+    width: 100px;
+    height: 100px;
+}
+
+.testimonial-carousel .owl-dots .owl-dot img {
+    opacity: .1;
+    transition: .5s;
+    border-radius: 100px;
+}
+
+.testimonial-carousel .owl-dots .owl-dot.active img {
+    opacity: 1;
+}
+
+.color-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+    border: 1px solid #ccc;
+}
+.white { background:#ffffff; }
+.gray { background:#808080; }
+
+
+/*** Footer ***/
+@keyframes footerAnimatedBg {
+	0% {
+        background-position: 0 0;
+    }
+
+	100% {
+        background-position: -1000px 0;
+    }
+}
+
+.footer {
+    background-color: #1a1a1a !important;
+	background-position: 0px 0px;
+    background-repeat: repeat-x;
+	animation: footerAnimatedBg 50s linear infinite;
+}
+
+.orange-letter {
+    color: var(--bs-orange);
+}
+
+/* Orange Social Buttons */
+.btn-outline-orange {
+    color:  var(--bs-orange);
+    border-color:  var(--bs-orange);
+    transition: 0.3s;
+}
+
+.btn-outline-orange:hover {
+    background:  var(--bs-orange);
+    color: var(--bs-white);
+}
+
+/** About Certificate Section ***/
+
+
+/* Responsive tweaks */
+@media (max-width: 767px) {
+    .certificate-img {
+        width: 60% !important;
+        max-width: 260px;
+        margin-bottom:20px;
+    }
+    .title-center h5 { font-size:16px; }
+    .title-center h1 { font-size:24px; }
+    h2 { font-size:20px; }
+    p { font-size:15px; }
+}
+
+
+/*** GUIDE SECTION ***/
+
+        .container-fluid {
+            padding: 0;
+        }
+
+        /* Top Heading */
+        .header-section {
+            background-color: var(--bs-dark);
+            padding: 50px 20px 80px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            overflow: hidden; /* Hide overflow of the background icon */
+        }
+
+        /* Background Settings Icon (New Feature) */
+        .header-section::before {
+            content: "\f013"; /* Unicode for fas fa-cog (gear/settings) */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            font-size: 25rem; /* Large size */
+            color: rgba(255, 152, 0, 0.05); /* Very light orange */
+            z-index: 0;
+            transform: rotate(30deg);
+        }
+
+        .header-title {
+            font-size: 2.8rem;
+            font-weight: bold;
+            color: #FFFFFF;
+            line-height: 1.3;
+            letter-spacing: 0.5px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1; 
+        }
+
+        /* Infographic Steps Container */
+        .infographic-steps {
+            position: relative;
+            padding: 50px 0;
+            z-index: 1;
+        }
+
+        /* Individual Step Styling */
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .step-number-wrapper {
+            position: relative;
+            margin-right: 30px;
+            flex-shrink: 0; 
+        }
+
+        /* Number Circle - Orange */
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: var(--bs-orange); /* Orange background for numbers */
+            color: var(--bs-white);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 10;
+        }
+
+        .step-content {
+            flex-grow: 1;
+            padding-top: 40px; 
+        }
+
+        .step-content h3 {
+            color: var(--bs-white);
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .step-content p {
+            color: var(--bs-gray);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Icon Wrapper for Image */
+        .step-icon-wrapper {
+            width: 200px;
+            height: 200px;
+            background-color: var(--bs-white);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            flex-shrink: 0;
+            margin-right: 30px;
+            position: relative;
+            z-index: 5;
+            overflow: hidden; /* Important for circular image cropping */
+        }
+
+        .step-icon-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the entire circular area */
+            border-radius: 50%; /* Double check for older browser safety */
+        }
+        
+        /* Main vertical line (background) - Orange */
+        .infographic-steps::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background-color: rgba(115, 70, 2, 0.4); /* Orange line */
+            z-index: 0;
+            transform: translateX(-50%);
+        }
+        
+        /* Dashed Line segments logic - Orange */
+        .step-item:not(:last-child)::before { 
+            content: '';
+            position: absolute;
+            top: 25px; 
+            width: calc(50vw - 75px - 100px); 
+            height: 2px;
+            border-top: 2px dashed #EC6521; /* Orange Dashed */
+            z-index: 1;
+        }
+        .step-item:not(:last-child)::after { 
+            content: '';
+            position: absolute;
+            top: 25px; 
+            height: 130px; 
+            width: 2px;
+            border-left: 2px dashed #EC6521; /* Orange Dashed */
+            z-index: 1;
+        }
+
+        /* Odd Steps (Content Left, Line starts right of number, goes left) */
+        .step-item:nth-child(odd):not(:last-child)::before {
+            left: 75px; 
+        }
+        .step-item:nth-child(odd):not(:last-child)::after {
+            left: calc(50vw - 100px); 
+        }
+
+        /* Even Steps (Content Right, Line starts left of number, goes right) */
+        .step-item:nth-child(even):not(:last-child)::before {
+            right: 75px; 
+        }
+        .step-item:nth-child(even):not(:last-child)::after {
+            right: calc(50vw - 100px); 
+        }
+
+        .htmlpanda-link {
+            display: flex;
+            align-items: center;
+            background-color: var(--step-bg);
+            padding: 15px 30px;
+            border-radius: 50px;
+            margin-bottom: 40px;
+            text-decoration: none;
+            color: #FFFFFF;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 991.98px) {
+            .step-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            .step-number-wrapper {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            .step-icon-wrapper {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            .step-content {
+                padding-top: 0;
+            }
+            .step-content h3 {
+                font-size: 1.5rem;
+            }
+            .step-content p {
+                font-size: 0.9rem;
+            }
+
+            /* Hide all complex connecting lines on small screens for simplicity */
+            .step-item::before,
+            .step-item::after {
+                display: none;
+            }
+            
+            /* Show simplified vertical line on mobile */
+            .infographic-steps::before {
+                display: block;
+                height: calc(100% - 100px);
+                top: 50px;
+            }
+            .step-item:last-child {
+                margin-bottom: 0;
+            }
+            
+            .header-section::before {
+                font-size: 15rem;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .header-title {
+                font-size: 1.8rem;
+            }
+            .step-number {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+            .step-icon-wrapper {
+                width: 120px;
+                height: 120px;
+            }
+            .htmlpanda-link {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+            .htmlpanda-link i {
+                font-size: 1.5rem;
+                margin-right: 10px;
+            }
+            .footer-monitor-icon {
+                width: 150px;
+            }
+        }
+
+/*** GOOGLE MAP ***/
+
+.map-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.map-link:hover {
+    color: var(--bs-white);
+    text-decoration: underline;
+}
+
+/*** GOOGLE MAP ***/
+
+.phone-link {
+    color: inherit;        
+    text-decoration: none; 
+}
+
+.phone-link:hover {
+    color: var(--bs-white);      
+    text-decoration: underline;
+}
+
+/*** CONTECT PAGE  ***/
+
+.table-link {
+    color: inherit;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.table-link:hover {
+    color: var(--bs-gray);
+    text-decoration: underline;
+}
+
+
